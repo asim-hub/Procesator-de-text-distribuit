@@ -1,0 +1,13 @@
+ASIMIONESEI DANIEL
+
+In implementarea temei am facut 5 noduri, reprezentate printr-o functie fiecare,
+pe care o apelez in main.
+Primul nod este functia master care lanseaza 4 thread-uri, la finalul carora am
+o bariera pentru a astepta rezultatul tuturor thread-urilor, pe care urmeaza sa
+il scriu in fisierul de iesire.Fiecare thread trimite cate un paragraf la cate
+un worker si il primeste prelucrat.Fiecare functie worker primeste un paragraf,
+lungimea lui, un vector de pozitii de '\n' si lungimea acestuia.De vector ma folosesc
+pentru a delimita randurile in buffer-ul primit si a ma ajuta la prelucrarea specifica
+fiecarui worker.
+In tema imbin atat MPI (MPI_SEND/MPI_RECV), cat si pthread (mutex si bariere).
+Folosesc un mutex pentru a evita situatiile de acces multimpu la un buffer.
